@@ -10,8 +10,8 @@ def parse_args():
     parser.add_argument('--phase', type=str, default='train', help='train or test ?')
     parser.add_argument('--dataset', type=str, default='celebA', help='[mnist / cifar10 / celebA]')
 
-    parser.add_argument('--epoch', type=int, default=10, help='The number of epochs to run')
-    parser.add_argument('--iteration', type=int, default=100000, help='The number of training iterations')
+    parser.add_argument('--epoch', type=int, default=5, help='The number of epochs to run')
+    parser.add_argument('--iteration', type=int, default=1000, help='The number of training iterations')
     parser.add_argument('--batch_size', type=int, default=32, help='The size of batch per gpu')
     parser.add_argument('--print_freq', type=int, default=500, help='The number of image_print_freqy')
     parser.add_argument('--save_freq', type=int, default=500, help='The number of ckpt_save_freq')
@@ -41,16 +41,6 @@ def check_args(args):
     check_folder(args.result_dir)
     check_folder(args.log_dir)
     check_folder(args.sample_dir)
-    # --epoch
-    try:
-        assert args.epoch >= 1
-    except:
-        print('number of epochs must be larger than or equal to one')
-    # --batch_size
-    try:
-        assert args.batch_size >= 1
-    except:
-        print('batch size must be larger than or equal to one')
     return args
 
 """main"""
