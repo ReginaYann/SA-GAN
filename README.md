@@ -22,7 +22,7 @@ the original paper:  [Self-Attention Generative Adversarial Networks.pdf](Self-A
 
 ​	self-attention其实就是attention机制的一种特殊情况，是需要计算自己对自己的权重。
 
-![framework](images_in_md\framework.PNG)
+![framework](images_in_md/framework.PNG)
 
 ​	f、g、h都是对feature maps做一个1*1卷积
 
@@ -56,13 +56,13 @@ the original paper:  [Self-Attention Generative Adversarial Networks.pdf](Self-A
 
 ​	(我的设备的算力确实不够，只能用CPU硬跑，这几天考试场次太多电脑空不下来，没有办法跑一整天，这幅图的结果是花了大约十二小时)
 
-![result 2](images_in_md\result 2.png)
+![result 2](images_in_md/result 2.png)
 
 ### result from a blog
 
 ​	这是网络上一个博主同样使用celebA的结果，可以看到，在算力足够的条件下，SA-GAN的效果还是很不错的。
 
-![celebA](images_in_md\celebA.png)
+![celebA](images_in_md/celebA.png)
 
 
 
